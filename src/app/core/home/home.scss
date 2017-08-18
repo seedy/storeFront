@@ -1,0 +1,9 @@
+header {
+  & > nav {
+    &.navbar {
+      & > ul li {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

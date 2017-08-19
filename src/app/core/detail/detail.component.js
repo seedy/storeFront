@@ -1,7 +1,15 @@
-require('./detail.scss');
+require('./detail.component.scss');
 
-export default class DetailController {
+
+class DetailController {
   constructor() {
 
   }
 }
+
+const detailComponent = {
+controller: DetailController,
+template: require('./detail.component.html')
+};
+
+export default detailComponent;

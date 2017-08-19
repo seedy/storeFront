@@ -3,9 +3,9 @@ import uirouter from 'angular-ui-router';
 
 import routing from './shop.routes';
 
-import CartController from './cart/cart.controller';
+import cartComponent from './cart/cart.component';
 
 export default angular.module('storefront.shop', [uirouter])
   .config(routing)
-  .controller('CartController', CartController)
+  .component('cartComponent', cartComponent)
   .name;

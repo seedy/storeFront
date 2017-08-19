@@ -1,8 +1,10 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
+// routing
 import routing from './core.routes';
 
+// component
 import homeComponent from './home/home.component';
 import categoryComponent from './category/category.component';
 import detailComponent from './detail/detail.component';

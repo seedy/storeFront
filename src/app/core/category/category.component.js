@@ -1,7 +1,20 @@
-require('./category.scss');
+require('./category.component.scss');
 
-export default class CategoryController {
+import headerUrl from 'media/plates-header.jpg';
+
+class CategoryController {
   constructor() {
-
+    this.headerUrl = headerUrl;
   }
+
 }
+
+const categoryComponent = {
+  bindings: {
+    title: '<'
+  },
+  controller: CategoryController,
+  template: require('./category.component.html')
+};
+
+export default categoryComponent;

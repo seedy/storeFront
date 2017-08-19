@@ -1,11 +1,17 @@
-require('./home.scss');
+require('./home.component.scss');
 
 import logoUrl from 'media/logo.png';
-import headerUrl from 'media/plates-header.jpg';
 
-export default class HomeController {
+
+class HomeController {
   constructor() {
     this.logoUrl = logoUrl;
-    this.headerUrl = headerUrl;
   }
+
 }
+const homeComponent = {
+  controller: HomeController,
+  template: require('./home.component.html')
+};
+
+export default homeComponent;

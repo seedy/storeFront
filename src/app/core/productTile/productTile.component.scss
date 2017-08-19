@@ -30,9 +30,12 @@ product-tile-component {
           color: white;
         }
 
-        &.primary-action {
+      }
+
+      .primary-action {
+        .confirm-button {
           background-color: #4A4A4E;
-          color: white;
+          height: 36px;
         }
       }
     }

@@ -1,0 +1,17 @@
+cart-icon-component {
+  .md-button {
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    padding: 0 18px 0 0;
+    margin: 0;
+    &.md-icon-button {
+      padding: 8px;
+    }
+    & > i.caret {
+      position: absolute;
+      right: 0;
+      top: 5px;
+    }
+  }
+}

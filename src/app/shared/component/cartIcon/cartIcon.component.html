@@ -1,0 +1,9 @@
+<md-button hide-xs ui-sref="home.cart" >
+    <span>My Cart</span>
+    <span ng-if="$ctrl.count > 0">({{$ctrl.count}})</span>
+    <i class="material-icons caret">arrow_drop_down</i>
+</md-button>
+<md-button class="md-icon-button" hide-gt-xs ui-sref="home.cart">
+    <i class="material-icons">lock_outline</i>
+</md-button>
+<span hide-gt-xs ng-if="$ctrl.count > 0">({{$ctrl.count}})</span>

@@ -1,0 +1,15 @@
+<header>
+    <nav class="navbar">
+        <a class="logo"><img ng-src="{{::home.logoUrl}}" alt="Hero" /></a>
+        <ul>
+            <li><a>Home</a></li>
+            <li><a><span>Shop</span><i class="material-icons">arrow_drop_down</i></a></li>
+            <li><a>Journal</a></li>
+            <li><a><span>More</span><i class="material-icons">arrow_drop_down</i></a></li>
+            <li class="right"><a ui-sref="home.cart"><span>My Cart</span><i class="material-icons">arrow_drop_down</i></a></li>
+        </ul>
+    </nav>
+</header>
+<section>
+    <ui-view></ui-view>
+</section>

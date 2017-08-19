@@ -1,6 +1,6 @@
 <div layout="column" layout-align="center center">
     <div class="breadcrumb"><span class="breadcrumb-active">{{$ctrl.breadcrumb | arrayJoinFilter:' / '}} / </span>{{$ctrl.product.title | uppercase}}</div>
-    <div class="detail-card" layout="row" layout-align="center center">
+    <div class="detail-card" layout-xs="column" layout-gt-xs="row" layout-align="center center">
         <img class="detail-img" ng-src="{{$ctrl.product.src}}"/>
         <div class="info" layout="column" layout-align="start center" layout-margin>
             <span class="subtitle">{{$ctrl.product.brand}}</span>

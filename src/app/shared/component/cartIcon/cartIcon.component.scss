@@ -13,5 +13,11 @@ cart-icon-component {
       right: 0;
       top: 5px;
     }
+    &.xs-button + .xs-count{
+      margin-left: -10px;
+    }
+  }
+  .xs-count {
+    font-size: 12px;
   }
 }

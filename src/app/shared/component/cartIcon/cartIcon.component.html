@@ -1,9 +1,9 @@
 <md-button hide-xs ng-click="$ctrl.openCartDialog($event)" >
     <span>My Cart</span>
-    <span ng-if="$ctrl.count > 0">({{$ctrl.count}})</span>
+    <span class="count" ng-if="$ctrl.count > 0">({{$ctrl.count}})</span>
     <i class="material-icons caret">arrow_drop_down</i>
 </md-button>
-<md-button class="md-icon-button" hide-gt-xs ng-click="$ctrl.openCartDialog($event)">
+<md-button class="md-icon-button xs-button" hide-gt-xs ng-click="$ctrl.openCartDialog($event)">
     <i class="material-icons">lock_outline</i>
 </md-button>
-<span hide-gt-xs ng-if="$ctrl.count > 0">({{$ctrl.count}})</span>
+<span class="xs-count" hide-gt-xs ng-if="$ctrl.count > 0">({{$ctrl.count}})</span>

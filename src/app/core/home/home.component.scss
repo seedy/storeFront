@@ -1,40 +1,45 @@
 header {
   & > nav {
     &.navbar {
-      height: 40px;
-      margin-bottom: 10px;
-      & > a {
-        &.logo {
-          float: left;
-          img {
-            height: 40px;
-          }
-        }
-      }
+      height: 60px;
+      margin-bottom: 12px;
       & > ul {
         list-style-type: none;
         text-align: center;
-        margin-top: 0.8em;
+        margin: 5px 0 0 0;
+        padding-left: 0;
         & > li {
-          padding: 0 5px;
           vertical-align: top;
-          font-size: 12px;
-          font-weight: bold;
           display: inline-block;
           text-transform: uppercase;
 
+          &.logo-xs {
+            @media screen and (min-width: 600px) {
+              float: left;
+            }
+            margin-top: -5px;
+          }
+          &.left {
+            float: left;
+          }
           &.right {
             float: right;
           }
-        & > a {
-          position: relative;
-          padding: 6px 24px 0 0;
-          & > i {
-            position: absolute;
-            right: 0;
-            top: 0;
+          & > .md-button {
+            font-size: 12px;
+            font-weight: bold;
+            position: relative;
+            padding: 0 6px 0 0;
+            margin: 0;
+            &.md-icon-button {
+              padding: 8px;
+            }
+            & > i.caret {
+              position: absolute;
+              right: 0;
+              top: 5px;
+            }
           }
-        }
         }
       }
     }

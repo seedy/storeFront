@@ -1,12 +1,41 @@
 <header>
     <nav class="navbar">
-        <a class="logo"><img ng-src="{{::home.logoUrl}}" alt="Hero" /></a>
         <ul>
-            <li><a>Home</a></li>
-            <li><a><span>Shop</span><i class="material-icons">arrow_drop_down</i></a></li>
-            <li><a>Journal</a></li>
-            <li><a><span>More</span><i class="material-icons">arrow_drop_down</i></a></li>
-            <li class="right"><a ui-sref="home.cart"><span>My Cart</span><i class="material-icons">arrow_drop_down</i></a></li>
+            <li hide-gt-xs class="left">
+                <md-menu>
+                    <md-button ng-click="$mdMenu.open($event)" class="md-icon-button" aria-label="menu">
+                        <md-icon class="material-icons">menu</md-icon>
+                    </md-button>
+                    <md-menu-content>
+                        <md-menu-item>
+                            <md-button ui-sref="home.category({type: 'plates'})">Home</md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                            <md-button><span>Shop</span><i class="material-icons caret">arrow_drop_down</i></md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                            <md-button>Journal</md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                            <md-button><span>More</span><i class="material-icons caret">arrow_drop_down</i></md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </li>
+            <li class="logo-xs"><img ng-src="{{::$ctrl.logoUrl}}" alt="Hero" /></li>
+            <li hide-xs><md-button ui-sref="home.category({type: 'plates'})">Home</md-button></li>
+            <li hide-xs><md-button><span>Shop</span><i class="material-icons caret">arrow_drop_down</i></md-button></li>
+            <li hide-xs><md-button>Journal</md-button></li>
+            <li hide-xs><md-button><span>More</span><i class="material-icons caret">arrow_drop_down</i></md-button></li>
+            <li class="right">
+                <md-button hide-xs ui-sref="home.cart" >
+                    <span>My Cart</span>
+                    <i class="material-icons caret">arrow_drop_down</i>
+                </md-button>
+                <md-button class="md-icon-button" hide-gt-xs ui-sref="home.cart">
+                    <i class="material-icons">lock_outline</i>
+                </md-button>
+            </li>
         </ul>
     </nav>
 </header>

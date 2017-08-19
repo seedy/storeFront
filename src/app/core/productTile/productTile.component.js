@@ -2,8 +2,9 @@ require('./productTile.component.scss');
 
 
 class ProductTileController {
-  constructor() {
+  constructor($state) {
     this.active = false;
+    this._$state = $state;
   }
 
   $onInit(){
@@ -12,6 +13,10 @@ class ProductTileController {
 
   toggleOverlay(){
     this.active = !this.active;
+  }
+
+  showDetails(){
+    return this._$state.go('home.detail', {id: this.product.id});
   }
 
 }

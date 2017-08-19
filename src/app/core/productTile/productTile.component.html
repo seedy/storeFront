@@ -1,7 +1,7 @@
 <div class="product-card" ng-mouseenter="$ctrl.toggleOverlay()" ng-mouseleave="$ctrl.toggleOverlay()">
     <img ng-src="{{$ctrl.product.src}}" />
     <div class="overlay" ng-hide="!$ctrl.active" layout="column" layout-align="center center">
-        <md-button class="default-action">View details</md-button>
+        <md-button class="default-action" ng-click="$ctrl.showDetails()">View details</md-button>
         <md-button class="primary-action">Add to cart</md-button>
     </div>
 </div>

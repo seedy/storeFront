@@ -1,0 +1,11 @@
+quantity-component {
+  .amount-block {
+    height: 64px;
+    background-color: #EEEEEE;
+  }
+  .action-block {
+    & > .md-button {
+      background-color: #DADADA;
+    }
+  }
+}

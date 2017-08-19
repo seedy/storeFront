@@ -1,0 +1,9 @@
+<div layout="row" layout-align="center center">
+    <div flex="70" class="amount-block" layout="column" layout-align="center center">
+        <span>{{$ctrl.amount}}</span>
+    </div>
+    <div class="action-block" flex="20" layout="column" layout-margin>
+        <md-button class="md-icon-button" ng-click="$ctrl.add()"><i class="material-icons">add</i></md-button>
+        <md-button class="md-icon-button" ng-click="$ctrl.remove()"><i class="material-icons">remove</i></md-button>
+    </div>
+</div>

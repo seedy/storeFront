@@ -3,6 +3,7 @@ require('./detail.component.scss');
 import products from 'json/products.json';
 
 class DetailController {
+
   constructor(ProductService) {
     this.product = null;
     this.breadcrumb = [];

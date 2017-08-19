@@ -4,12 +4,10 @@ import headerUrl from 'media/plates-header.jpg';
 import products from 'json/products.json';
 
 class CategoryController {
-  constructor() {
+  constructor(ProductService) {
     this.headerUrl = headerUrl;
-    this.products = products.map((product) => {
-      return angular.extend(product, {
-        src: require('media/' + product.image)
-      });
+    this.products = products.map((product, index) => {
+      return ProductService.extendJson(product, index+1);
     });
   }
 }

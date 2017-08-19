@@ -1,0 +1,31 @@
+detail-component {
+  $img-width: 1000px;
+  $img-height: 450px;
+  .detail-card {
+    margin: 0 6%;
+    & > .detail-img {
+      width: $img-width;
+      height: $img-height;
+      margin: 0 30px;
+    }
+    & > .info {
+      & > .subtitle {
+        opacity: 0.8;
+      }
+      & > .price {
+        font-weight: bold;
+        color: #AB9F9F;
+      }
+      & > .title {
+        font-size: 2em;
+        font-weight: bold;
+      }
+    }
+  }
+  .breadcrumb {
+    margin-bottom: 60px;
+    & > .breadcrumb-active {
+      font-weight: bold;
+    }
+  }
+}

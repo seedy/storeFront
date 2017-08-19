@@ -14,9 +14,14 @@ export default function routes($stateProvider) {
       },
       component: 'categoryComponent'
     })
-    .state('home.category.detail', {
-      url: '/:id',
-      component: 'detailComponent'
+    .state('home.detail', {
+      url: '/detail/{id:int}',
+      component: 'detailComponent',
+      resolve: {
+        id: function($transition$) {
+          return $transition$.params().id;
+        }
+      }
     })
   ;
 }

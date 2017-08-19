@@ -1,0 +1,18 @@
+<div layout="column" layout-align="center center">
+    <div class="breadcrumb"><span class="breadcrumb-active">{{$ctrl.breadcrumb | arrayJoinFilter:' / '}} / </span>{{$ctrl.product.title | uppercase}}</div>
+    <div class="detail-card" layout="row" layout-align="center center">
+        <img class="detail-img" ng-src="{{$ctrl.product.src}}"/>
+        <div class="info" layout="column" layout-align="start center" layout-margin>
+            <span class="subtitle">{{$ctrl.product.brand}}</span>
+            <span class="title">{{$ctrl.product.title}}</span>
+            <span class="price">{{$ctrl.product.price |  currency:'$':2}}</span>
+            <p>
+                Lorem ipsum dolor sit amet, quidam facilisi duo eu. Nihil iudicabit ei vel, ad his tale accusam,
+                dicunt explicari incorrupte no eos. In purto repudiare dissentiunt pri.
+            </p>
+        </div>
+        <div>
+            <quantity-component amount="0"></quantity-component>
+        </div>
+    </div>
+</div>

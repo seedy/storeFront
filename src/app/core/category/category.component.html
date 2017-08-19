@@ -1,3 +1,13 @@
 <div class="banner">
-    <img ng-src="{{::home.headerUrl}}" alt="Plates" />
+    <img ng-src="{{::$ctrl.headerUrl}}" alt="Plates" />
+    <div class="block" layout="column" layout-align="center center">
+        <div class="title">{{$ctrl.title}}</div>
+        <div class="body">
+            Lorem ipsum dolor sit amet, quidam facilisi duo eu. Nihil iudicabit ei vel, ad his tale accusam, dicunt explicari incorrupte no eos. In purto repudiare dissentiunt pri.
+        </div>
+    </div>
+</div>
+
+<div class="product-list" layout="row" layout-wrap layout-align="center center" layout-margin>
+    <product-tile-component flex="25" ng-repeat="product in $ctrl.products" product="product"></product-tile-component>
 </div>

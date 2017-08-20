@@ -4,6 +4,11 @@ md-dialog {
     .text-right {
       text-align: right;
     }
+    cart-icon-component {
+      .md-button-text, .xs-count {
+        text-decoration: underline;
+      }
+    }
   }
   & > md-dialog-content {
     md-list {
@@ -36,12 +41,18 @@ md-dialog {
     }
     .footer {
       width: 100%;
+      &.subtitle {
+        font-size: 0.8em;
+        font-weight: bold;
+        color: #C2C2C2;
+      }
     }
     .text-right {
       text-align: right;
     }
     .action-button {
       padding: 0 24px;
+      width: 50%;
       &.primary-button {
         color: white;
         background-color: #1D1D20;

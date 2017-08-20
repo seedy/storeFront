@@ -1,6 +1,11 @@
 detail-component {
   $img-width: 1000px;
   $img-height: 450px;
+
+  .container {
+    border-top: 1px solid #E4E4E4;
+    padding-top: 20px;
+  }
   .detail-card {
     margin: 0 6%;
     & > .detail-img {
@@ -19,6 +24,11 @@ detail-component {
       & > .title {
         font-size: 2em;
         font-weight: bold;
+      }
+      & > .description {
+        padding-bottom: 25px;
+        border-bottom: 1px solid #E4E4E4;
+        margin-bottom: 10px;
       }
     }
   }

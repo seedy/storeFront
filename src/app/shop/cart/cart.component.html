@@ -1,0 +1,55 @@
+<div class="container" layout="column" layout-align="center center">
+    <h1 class="headline">Shopping Cart</h1>
+    <div class="cart-container">
+        <md-list>
+            <md-list-item hide-xs class="md-1-line thead" layout="row" layout-align="start center">
+                <span class="th" flex="60">Product</span>
+                <span class="th" flex="20">Quantity</span>
+                <span class="th" flex="10">Total</span>
+                <span class="th" flex="10">Action</span>
+            </md-list-item>
+            <md-list-item class="tbody" class="md-3-line" ng-repeat="product in $ctrl.products" layout-gt-xs="row" layout-xs="column" layout-align-xs="center start">
+                <div flex-xs="100" flex-gt-xs="60" layout="row">
+                    <img class="md-avatar thumbnail" ng-src="{{product.src}}" alt="{{product.title}}" />
+                    <div flex="80" class="md-list-item-text" layout="column">
+                        <span class="subtitle primary-text">{{product.brand}}</span>
+                        <span class="title primary-text">{{product.title}}</span>
+                    </div>
+                </div>
+                <div class="cart-info" flex-xs="100" flex-gt-xs="40" layout="row" layout-align-gt-xs="start start" layout-align-xs="start center">
+                    <div flex-gt-xs="50" flex-xs="60">
+                        <quantity-component id="product.id" confirm="false" amount="product.amount"></quantity-component>
+                    </div>
+                    <div flex-gt-xs="25" flex-xs="30">
+                        <span class="primary-text subtitle">{{product.price | currency}}</span>
+                    </div>
+                    <div class="right" flex-gt-xs="25" flex-xs="10">
+                        <md-button class="list-item-button md-icon-button" ng-click="$ctrl.removeProduct(product.id)"><i class="material-icons">clear</i></md-button>
+                    </div>
+                </div>
+            </md-list-item>
+        </md-list>
+        <div class="list-footer" layout="column">
+            <div class="overview" layout="row">
+                <div class="thead" layout="column" flex-offset-gt-xs="50" flex-gt-xs="25" flex-xs="50" layout-margin>
+                    <span class="primary-text">CART OVERVIEW</span>
+                    <span>SUBTOTAL</span>
+                    <span>TOTAL</span>
+                </div>
+                <div class="right" layout="column" flex-gt-xs="25" flex-xs="50" layout-margin>
+                    <span>&nbsp;</span>
+                    <span>{{$ctrl.total | currency}}</span>
+                    <span class="primary-text">{{$ctrl.total | currency}} CAD</span>
+                </div>
+            </div>
+            <div layout-gt-xs="row" layout-xs="column" layout-align-xs="center center">
+                <div class="xs-full" flex="50">
+                    <md-button class="underline-button" ui-sref="home.category({type:'plates'})">CONTINUE SHOPPING</md-button>
+                </div>
+                <div class="right" flex="50">
+                    <md-button class="primary-button">CHECKOUT {{$ctrl.total | currency}}</md-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

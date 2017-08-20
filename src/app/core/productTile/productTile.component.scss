@@ -1,0 +1,57 @@
+product-tile-component {
+  $tile-width: 200px;
+  $tile-height: 150px;
+
+  margin-bottom: 80px !important;
+  width: $tile-width;
+  height: $tile-height;
+  min-width: $tile-width;
+  min-height: $tile-width;
+  & > .product-card {
+    position: relative;
+    display: inline-block;
+    img {
+      width: $tile-width;
+      height: $tile-height;
+      max-width: 250px;
+    }
+    & > .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .md-button {
+        font-size: 0.6em;
+        padding: 0 25px;
+        &.default-action {
+          background-color: #1D1D20;
+          color: white;
+        }
+
+      }
+
+      .primary-action {
+        .confirm-button {
+          background-color: #4A4A4E;
+          height: 36px;
+        }
+      }
+    }
+  }
+  & > .info {
+    & > * {
+      display: block;
+      font-size: 0.8em;
+      margin: 5px 0;
+    }
+    .subtitle {
+      font-size: 0.8em;
+      opacity: 0.8;
+    }
+    .title {
+      font-weight: bold;
+    }
+  }
+}

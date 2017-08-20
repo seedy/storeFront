@@ -1,15 +1,19 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
+// routing
 import routing from './core.routes';
 
-import HomeController from './home/home.controller';
-import CategoryController from './category/category.controller';
-import DetailController from './detail/detail.controller';
+// component
+import homeComponent from './home/home.component';
+import categoryComponent from './category/category.component';
+import detailComponent from './detail/detail.component';
+import productTileComponent from './productTile/productTile.component';
 
 export default angular.module('storefront.core', [uirouter])
   .config(routing)
-  .controller('HomeController', HomeController)
-  .controller('CategoryController', CategoryController)
-  .controller('DetailController', DetailController)
+  .component('homeComponent', homeComponent)
+  .component('categoryComponent', categoryComponent)
+  .component('detailComponent', detailComponent)
+  .component('productTileComponent', productTileComponent)
   .name;

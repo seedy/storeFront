@@ -1,0 +1,12 @@
+<div class="product-card" ng-mouseenter="$ctrl.toggleOverlay()" ng-mouseleave="$ctrl.toggleOverlay()">
+    <img ng-src="{{$ctrl.product.src}}" alt="{{$ctrl.product.title}}" />
+    <div class="overlay" ng-hide="!$ctrl.active" layout="column" layout-align="center center">
+        <md-button class="default-action" ng-click="$ctrl.showDetails()">View details</md-button>
+        <add-cart-component class="primary-action" amount="1" id="$ctrl.product.id"></add-cart-component>
+    </div>
+</div>
+<div class="info">
+    <span class="subtitle">{{$ctrl.product.brand}}</span>
+    <span class="title">{{$ctrl.product.title}}</span>
+    <span class="subtitle">{{$ctrl.product.price |  currency:'$':2}}</span>
+</div>

@@ -1,0 +1,18 @@
+quantity-component {
+  display: inline-block;
+  .amount-block {
+    height: 64px;
+    background-color: #EEEEEE;
+  }
+  .action-block {
+    & > .md-button {
+      background-color: #DADADA;
+    }
+  }
+  .confirm-button {
+    height: 64px;
+    padding: 0 24px;
+    background-color: #1D1D20;
+    color: white;
+  }
+}

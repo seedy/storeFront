@@ -1,22 +1,27 @@
 export default function routes($stateProvider) {
   $stateProvider
     .state('home', {
-      url: '/',
-      template: require('./home/home.html'),
-      controller: 'HomeController',
-      controllerAs: 'home'
+      url: '',
+      component: 'homeComponent',
+      abstract: true
     })
     .state('home.category', {
-      url: '/category/:type',
-      template: require('./category/category.html'),
-      controller: 'CategoryController',
-      controllerAs: 'category'
+      url: '/category/{type}',
+      resolve: {
+        title: function($transition$) {
+          return $transition$.params().type;
+        }
+      },
+      component: 'categoryComponent'
     })
-    .state('home.category.detail', {
-      url: '/:id',
-      template: require('./detail/detail.html'),
-      controller: 'DetailController',
-      controllerAs: 'detail'
+    .state('home.detail', {
+      url: '/detail/{id:int}',
+      component: 'detailComponent',
+      resolve: {
+        id: function($transition$) {
+          return $transition$.params().id;
+        }
+      }
     })
   ;
 }

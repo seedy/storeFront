@@ -8,9 +8,11 @@ export default class CartDialogController {
     this.dialog = $mdDialog;
     this.logoUrl = logoUrl;
     this.store = store;
+    this.productService = ProductService;
+
     this.allProducts = products
     .map((json, index) => {
-      return ProductService.extendJson(json, index+1);
+      return this.productService.extendJson(json, index+1);
     });
 
     this.products = this.listStore();
@@ -30,21 +32,14 @@ export default class CartDialogController {
   }
 
   listStore(){
-    return this.allProducts
-    .filter((product) => this.store[product.id] !== undefined)
-    .map((product) => angular.extend(product, {amount: this.store[product.id]}))
-    ;
+    return this.productService.listProdInStore(this.allProducts, this.store);
   }
 
   getTotal(){
-    return this.products.reduce((aggr, prod) => {
-      aggr+= prod.price * prod.amount;
-      return aggr;
-    }, 0);
+    return this.productService.sumProductPrices(this.products);
   }
 
   goToCart(){
-    // need to pass data?
-    return this.dialog.hide({store: this.store, total: this.total});
+    return this.dialog.hide();
   }
 }

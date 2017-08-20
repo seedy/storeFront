@@ -1,7 +1,54 @@
 md-dialog {
+  width: 400px;
   .md-toolbar-tools {
     .text-right {
       text-align: right;
+    }
+  }
+  & > md-dialog-content {
+    md-list {
+      & > md-list-item {
+        .thumbnail {
+          width: 80px;
+          height: 80px;
+        }
+        .md-list-item-text {
+          font-size: 0.7em;
+          .title {
+            font-size: 1.3em;
+          }
+          .primary-text {
+            font-weight: bold;
+          }
+          .subtitle {
+            opacity: 0.8;
+          }
+        }
+        .list-item-button {
+          margin-top: 10px !important;
+        }
+      }
+    }
+  }
+  & > md-dialog-actions {
+    &.fixed-height {
+      min-height: 80px;
+    }
+    .footer {
+      width: 100%;
+    }
+    .text-right {
+      text-align: right;
+    }
+    .action-button {
+      padding: 0 24px;
+      &.primary-button {
+        color: white;
+        background-color: #1D1D20;
+        &:hover,&:focus {
+          background-color: #4A4A4E;
+        }
+      }
     }
   }
 }

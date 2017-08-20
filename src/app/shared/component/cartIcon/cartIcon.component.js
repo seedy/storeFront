@@ -3,10 +3,11 @@ require('./cartIcon.component.scss');
 import CartDialogController from '../../dialog/cartDialog/cartDialog.controller';
 
 class CartIconController {
-  constructor($rootScope, $mdDialog) {
+  constructor($rootScope, $mdDialog, $state) {
     this.rootScope = $rootScope;
     this.dialogCtrl = CartDialogController;
     this.$mdDialog = $mdDialog;
+    this.state = $state;
     this.events = [];
   }
 
@@ -23,6 +24,10 @@ class CartIconController {
     if(storeChanges && storeChanges.currentValue !== undefined){
       this.count = this.countFromStore();
     }
+  }
+
+  $doCheck(){
+    this.count = this.countFromStore();
   }
 
   $onDestroy(){
@@ -71,6 +76,7 @@ class CartIconController {
   }
 
   openCartDialog(event){
+    let self = this;
     this.$mdDialog.show({
       controller: this.dialogCtrl,
       controllerAs: '$ctrl',
@@ -81,15 +87,16 @@ class CartIconController {
       targetEvent: event,
       clickOutsideToClose: true
     })
-      .then(function(){
-
-      })
+      .then(function(response){
+        return self.state.go('home.cart');
+      }, function(){
+      });
   }
 }
 
 const cartIconComponent = {
   controller: CartIconController,
-  bindings: {store: '<'},
+  bindings: {store: '='},
   template: require('./cartIcon.component.html')
 };
 

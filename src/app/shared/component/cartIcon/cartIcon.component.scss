@@ -8,6 +8,9 @@ cart-icon-component {
     &.md-icon-button {
       padding: 8px;
     }
+    & > .button-text {
+      padding-left: 10px;
+    }
     & > i.caret {
       position: absolute;
       right: 0;

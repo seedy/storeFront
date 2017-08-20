@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run serve",
     "build": "webpack",
     "watch": "webpack --progress --watch",
     "serve": "webpack-dev-server --open",

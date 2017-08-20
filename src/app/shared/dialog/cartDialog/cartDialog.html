@@ -1,0 +1,10 @@
+<md-dialog aria-label="My Cart">
+    <form ng-cloak>
+        <md-toolbar class="md-menu-toolbar">
+            <div class="md-toolbar-tools" layout="row" layout-align="end center">
+                <img flex="40" ng-src="{{::$ctrl.logoUrl}}" alt="Hero" hide-gt-xs />
+                <cart-icon-component class="text-right" flex="60" store="$ctrl.store"></cart-icon-component>
+            </div>
+        </md-toolbar>
+    </form>
+</md-dialog>

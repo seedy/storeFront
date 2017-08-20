@@ -1,6 +1,6 @@
 require('./cartIcon.component.scss');
 
-import CartDialogController from '../../../core/cartDialog/cartDialog.controller';
+import CartDialogController from '../../dialog/cartDialog/cartDialog.controller';
 
 class CartIconController {
   constructor($rootScope, $mdDialog) {
@@ -76,7 +76,7 @@ class CartIconController {
       controllerAs: '$ctrl',
       locals: {store: this.store},
       bindToController: true,
-      template: require('../../../core/cartDialog/cartDialog.html'),
+      template: require('../../dialog/cartDialog/cartDialog.html'),
       parent: angular.element(document.body),
       targetEvent: event,
       clickOutsideToClose: true

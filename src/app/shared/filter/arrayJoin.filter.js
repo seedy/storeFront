@@ -1,4 +1,3 @@
-import angular from 'angular';
 
 export default function arrayJoinFilter(){
   return function(array, separator){

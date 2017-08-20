@@ -3,6 +3,12 @@ class ProductService {
 
   }
 
+  /**
+   *
+   * @param product { Object }
+   * @param id { int }
+   * @returns { Object }
+   */
   extendJson(product, id) {
     return angular.extend(product, {
       id,
@@ -11,6 +17,11 @@ class ProductService {
     });
   }
 
+  /**
+   *
+   * @param products { [any] }
+   * @param store { Object }
+   */
   listProdInStore(products, store){
     return products
       .filter((product) => store[product.id] !== undefined)
@@ -18,6 +29,11 @@ class ProductService {
       ;
   }
 
+  /**
+   *
+   * @param products { [int] }
+   * @returns { int }
+   */
   sumProductPrices(products){
     return products.reduce((aggr, prod) => {
       aggr+= prod.price * prod.amount;

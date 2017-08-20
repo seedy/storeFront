@@ -7,10 +7,6 @@ class ProductTileController {
     this._$state = $state;
   }
 
-  $onInit(){
-
-  }
-
   toggleOverlay(){
     this.active = !this.active;
   }

@@ -1,6 +1,5 @@
 require('./cartIcon.component.scss');
 
-import angular from 'angular';
 import CartDialogController from '../../dialog/cartDialog/cartDialog.controller';
 
 class CartIconController {
@@ -17,18 +16,9 @@ class CartIconController {
     }
   }
 
-  $onChanges(changes){
-    let storeChanges = changes.store;
-    if(storeChanges && storeChanges.currentValue !== undefined){
-      this.count = this.countFromStore();
-    }
-  }
-
   $doCheck(){
     this.count = this.countFromStore();
   }
-
-
 
   countFromStore(){
     return Object.keys(this.store).reduce((aggr, key) => {

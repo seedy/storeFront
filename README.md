@@ -119,3 +119,7 @@ My stack for this project :
 - Refactoring
  
  Graphic elements manually repeated because of small differences.
+ 
+ - Comments
+ 
+ I didn't take time to write jsdoc or comments
